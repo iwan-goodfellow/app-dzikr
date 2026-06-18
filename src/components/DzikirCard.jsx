@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
-export default function DzikirCard({ data }) {
+// Terima props fontSize dari App.jsx
+export default function DzikirCard({ data, fontSize }) {
   const [showFadhilah, setShowFadhilah] = useState(false);
 
   return (
@@ -10,17 +11,18 @@ export default function DzikirCard({ data }) {
       </h2>
       
       <div dir="rtl" className="mb-6">
-        {/* FIX 1: Tambahin "whitespace-pre-line" biar \n dibaca jadi enter */}
-        <p className="font-arabic text-4xl leading-[2.5] text-right whitespace-pre-line">
+        {/* Font size sekarang ngikutin state dinamis, default line-height diperlebar dikit biar aman */}
+        <p 
+          className="font-arabic text-right whitespace-pre-line"
+          style={{ fontSize: `${fontSize}px`, lineHeight: '2.2' }}
+        >
           {data.arabic}
         </p>
       </div>
 
-      {/* FIX 2: Ganti pemanggil data dari .latin jadi .transliteration */}
       <p className="text-sm italic opacity-80 mb-4">{data.transliteration || data.latin}</p>
       <p className="text-sm mb-6 leading-relaxed">{data.translation}</p>
 
-      {/* Sembunyiin tombol fadhilah kalau datanya null */}
       {data.fadhilah && (
         <div className="mt-4">
           <button 
