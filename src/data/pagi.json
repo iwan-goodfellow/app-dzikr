@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Ayat Kursi",
+    "arabic": "اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ ...",
+    "latin": "Allahu laa ilaaha illaa huwal hayyul qoyyuum...",
+    "translation": "Allah, tidak ada tuhan (yang berhak disembah) melainkan Dia Yang Hidup kekal lagi terus menerus mengurus (makhluk-Nya)...",
+    "fadhilah": "Barangsiapa membacanya di pagi hari, maka ia akan dilindungi dari gangguan jin hingga petang.",
+    "target": 1
+  },
+  {
+    "id": 2,
+    "title": "Surat Al-Ikhlas",
+    "arabic": "قُلْ هُوَ اللَّهُ أَحَدٌ ۝ اللَّهُ الصَّمَدُ ۝ لَمْ يَلِدْ وَلَمْ يُولَدْ ۝ وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ ۝",
+    "latin": "Qul huwallahu ahad. Allahush shomad. Lam yalid walam yuulad. Walam yakul lahuu kufuwan ahad.",
+    "translation": "Katakanlah: Dialah Allah, Yang Maha Esa. Allah adalah Tuhan yang bergantung kepada-Nya segala sesuatu...",
+    "fadhilah": "Barangsiapa membacanya 3 kali di pagi dan petang hari, maka akan dicukupkan baginya segala sesuatu.",
+    "target": 3
+  }
+]
