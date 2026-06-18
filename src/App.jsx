@@ -1,18 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useProgress } from './hooks/useProgress';
 import DzikirCard from './components/DzikirCard';
 import Counter from './components/Counter';
 import pagiData from './data/pagi.json';
-// Nanti kalau petang.json udah ada, tinggal un-comment baris di bawah ini:
-// import petangData from './data/petang.json'; 
+import petangData from './data/petang.json'; 
 
 export default function App() {
   const [darkMode, setDarkMode] = useProgress('theme-dark', true);
-  const [isPagi, setIsPagi] = useProgress('mode-pagi', true); // State baru buat Pagi/Petang
+  const [isPagi, setIsPagi] = useProgress('mode-pagi', true); 
   const [currentIndex, setCurrentIndex] = useProgress('dzikir-index', 0);
   const [tapCount, setTapCount] = useProgress('dzikir-tap', 0);
 
-  // Efek ganti tema
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add('dark');
@@ -21,15 +19,13 @@ export default function App() {
     }
   }, [darkMode]);
 
-  // Nanti ganti fallback pagiData ini jadi petangData kalau filenya udah lo bikin
-  const currentData = isPagi ? pagiData : pagiData; 
+  const currentData = isPagi ? pagiData : petangData; 
   const currentDzikir = currentData[currentIndex];
 
-  // Fungsi ganti mode (Pagi <-> Petang)
-  const toggleMode = () => {
-    setIsPagi(!isPagi);
-    setCurrentIndex(0); // Reset ke dzikir pertama
-    setTapCount(0);     // Reset hitungan
+  const handleModeChange = (e) => {
+    setIsPagi(e.target.value === 'pagi');
+    setCurrentIndex(0); 
+    setTapCount(0);     
     window.scrollTo(0, 0);
   };
 
@@ -61,33 +57,35 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen selection:bg-light-primary selection:text-white">
+    <div className="min-h-screen selection:bg-light-primary selection:text-white pb-24">
       <div className="max-w-md mx-auto pt-6 px-4">
         
+        {/* HEADER BARU YANG CLEAN */}
         <header className="flex justify-between items-center mb-6">
-          <h1 className="text-2xl font-bold text-light-primary dark:text-dark-primary">
-            Dzikir {isPagi ? 'Pagi' : 'Petang'}
-          </h1>
           
-          <div className="flex gap-2">
-            {/* Tombol Switch Pagi/Petang */}
-            <button 
-              onClick={toggleMode}
-              className="px-3 py-1 text-sm font-bold rounded-lg bg-light-primary/10 text-light-primary dark:bg-dark-primary/20 dark:text-dark-primary hover:opacity-80 transition"
+          {/* Judul yang merangkap jadi Dropdown */}
+          <div className="relative">
+            <select 
+              value={isPagi ? 'pagi' : 'petang'}
+              onChange={handleModeChange}
+              className="appearance-none text-2xl font-bold text-light-primary dark:text-dark-primary bg-transparent cursor-pointer outline-none pr-6"
             >
-              {isPagi ? '☀️ Pagi' : '🌙 Petang'}
-            </button>
-
-            {/* Tombol Dark Mode */}
-            <button 
-              onClick={() => setDarkMode(!darkMode)}
-              className="p-2 rounded-lg bg-light-secondary dark:bg-dark-secondary hover:opacity-80 transition"
-            >
-              {darkMode ? '☀️' : '🌙'}
-            </button>
+              <option value="pagi" className="text-base bg-light-surface dark:bg-dark-surface">Dzikir Pagi ▾</option>
+              <option value="petang" className="text-base bg-light-surface dark:bg-dark-surface">Dzikir Petang ▾</option>
+            </select>
           </div>
+
+          {/* Tombol Dark Mode sendirian di kanan */}
+          <button 
+            onClick={() => setDarkMode(!darkMode)}
+            className="p-2 rounded-lg bg-light-secondary dark:bg-dark-secondary hover:opacity-80 transition flex-shrink-0"
+            title="Toggle Theme"
+          >
+            {darkMode ? '☀️' : '🌙'}
+          </button>
         </header>
 
+        {/* Progress Tracker */}
         <div className="flex justify-between items-center text-sm font-semibold opacity-60 mb-4 px-1">
           <button 
             onClick={handlePrev} 
@@ -99,7 +97,12 @@ export default function App() {
           <span>{currentIndex + 1} / {currentData.length}</span>
         </div>
 
-        {currentDzikir && <DzikirCard data={currentDzikir} />}
+        {/* 
+          FIX BUG FADHILAH: 
+          Nambahin 'key={currentDzikir.id}' bikin React nge-reset ulang 
+          komponen ini tiap kali user pindah halaman. Fadhilah dijamin mingkem lagi! 
+        */}
+        {currentDzikir && <DzikirCard key={currentDzikir.id} data={currentDzikir} />}
         
         {currentDzikir && (
           <Counter 

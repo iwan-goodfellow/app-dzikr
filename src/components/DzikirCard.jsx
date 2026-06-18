@@ -10,27 +10,32 @@ export default function DzikirCard({ data }) {
       </h2>
       
       <div dir="rtl" className="mb-6">
-        <p className="font-arabic text-4xl leading-[2.5] text-right">
+        {/* FIX 1: Tambahin "whitespace-pre-line" biar \n dibaca jadi enter */}
+        <p className="font-arabic text-4xl leading-[2.5] text-right whitespace-pre-line">
           {data.arabic}
         </p>
       </div>
 
-      <p className="text-sm italic opacity-80 mb-4">{data.latin}</p>
+      {/* FIX 2: Ganti pemanggil data dari .latin jadi .transliteration */}
+      <p className="text-sm italic opacity-80 mb-4">{data.transliteration || data.latin}</p>
       <p className="text-sm mb-6 leading-relaxed">{data.translation}</p>
 
-      <div className="mt-4">
-        <button 
-          onClick={() => setShowFadhilah(!showFadhilah)}
-          className="text-xs font-bold text-light-primary dark:text-dark-primary uppercase tracking-wider bg-light-secondary/50 dark:bg-dark-secondary/50 px-3 py-2 rounded-lg"
-        >
-          {showFadhilah ? '- Tutup Fadhilah' : '+ Lihat Fadhilah'}
-        </button>
-        {showFadhilah && (
-          <div className="mt-3 p-4 bg-light-secondary dark:bg-dark-secondary rounded-lg text-sm leading-relaxed">
-            {data.fadhilah}
-          </div>
-        )}
-      </div>
+      {/* Sembunyiin tombol fadhilah kalau datanya null */}
+      {data.fadhilah && (
+        <div className="mt-4">
+          <button 
+            onClick={() => setShowFadhilah(!showFadhilah)}
+            className="text-xs font-bold text-light-primary dark:text-dark-primary uppercase tracking-wider bg-light-secondary/50 dark:bg-dark-secondary/50 px-3 py-2 rounded-lg"
+          >
+            {showFadhilah ? '- Tutup Fadhilah' : '+ Lihat Fadhilah'}
+          </button>
+          {showFadhilah && (
+            <div className="mt-3 p-4 bg-light-secondary dark:bg-dark-secondary rounded-lg text-sm leading-relaxed">
+              {data.fadhilah}
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }
