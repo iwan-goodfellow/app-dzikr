@@ -15,14 +15,16 @@ export default function Counter({ count, target, onTap, onNext }) {
                 : 'bg-light-secondary dark:bg-dark-secondary text-gray-800 dark:text-gray-100'
             }`}
           >
-            {isDone ? 'Selesai! Lanjut >' : `TAP (${count} / ${target})`}
+            {/* Di dalam string template JS, pakai > biasa nggak apa-apa */}
+            {isDone ? 'Selesai! Lanjut \u2192' : `TAP (${count} / ${target})`}
           </button>
         ) : (
           <button
             onClick={onNext}
             className="w-full py-4 bg-light-primary dark:bg-dark-primary text-white rounded-xl font-bold text-lg transition-all transform active:scale-95 shadow-sm"
           >
-            Selesai & Lanjut >
+            {/* Di luar string, pakai &rarr; (right arrow) biar aman dan cakep */}
+            Selesai & Lanjut &rarr;
           </button>
         )}
       </div>
