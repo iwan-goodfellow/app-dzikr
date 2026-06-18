@@ -1,122 +1,89 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import React from 'react';
+import { useProgress } from './hooks/useProgress';
+import DzikirCard from './components/DzikirCard';
+import Counter from './components/Counter';
+import pagiData from './data/pagi.json';
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  const [darkMode, setDarkMode] = useProgress('theme-dark', true);
+  const [currentIndex, setCurrentIndex] = useProgress('dzikir-index', 0);
+  const [tapCount, setTapCount] = useProgress('dzikir-tap', 0);
+
+  // Efek ganti tema
+  React.useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [darkMode]);
+
+  const currentDzikir = pagiData[currentIndex];
+
+  const handleTap = () => {
+    if (tapCount < currentDzikir.target) {
+      setTapCount(tapCount + 1);
+    }
+  };
+
+  const handleNext = () => {
+    if (currentIndex < pagiData.length - 1) {
+      setCurrentIndex(currentIndex + 1);
+      setTapCount(0);
+      window.scrollTo(0, 0);
+    } else {
+      alert("Alhamdulillah, Dzikir Pagi Selesai!");
+      setCurrentIndex(0);
+      setTapCount(0);
+    }
+  };
+
+  const handlePrev = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+      setTapCount(0);
+      window.scrollTo(0, 0);
+    }
+  };
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div className="min-h-screen selection:bg-light-primary selection:text-white">
+      <div className="max-w-md mx-auto pt-6 px-4">
+        
+        <header className="flex justify-between items-center mb-6">
+          <h1 className="text-2xl font-bold text-light-primary dark:text-dark-primary">
+            Dzikir Pagi
+          </h1>
+          <button 
+            onClick={() => setDarkMode(!darkMode)}
+            className="p-2 rounded-full bg-light-secondary dark:bg-dark-secondary hover:opacity-80 transition"
+          >
+            {darkMode ? '☀️' : '🌙'}
+          </button>
+        </header>
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
+        <div className="flex justify-between items-center text-sm font-semibold opacity-60 mb-4 px-1">
+          <button 
+            onClick={handlePrev} 
+            disabled={currentIndex === 0}
+            className={currentIndex === 0 ? 'invisible' : 'hover:text-light-primary dark:hover:text-dark-primary'}
+          >
+            &larr; Sebelumnya
+          </button>
+          <span>{currentIndex + 1} / {pagiData.length}</span>
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+        {currentDzikir && <DzikirCard data={currentDzikir} />}
+        
+        {currentDzikir && (
+          <Counter 
+            count={tapCount} 
+            target={currentDzikir.target} 
+            onTap={handleTap} 
+            onNext={handleNext} 
+          />
+        )}
+      </div>
+    </div>
+  );
 }
-
-export default App
