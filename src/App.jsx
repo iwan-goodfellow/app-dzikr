@@ -31,13 +31,23 @@ export default function App() {
     window.scrollTo(0, 0);
   };
 
-  const handleTap = () => {
+const handleTap = () => {
     if (tapCount < currentDzikir.target) {
       setTapCount(tapCount + 1);
+      
+      // Kasih geteran pendek (50 milidetik) tiap kali nge-tap
+      if (window.navigator && window.navigator.vibrate) {
+        window.navigator.vibrate(50);
+      }
     }
   };
 
   const handleNext = () => {
+    // Kasih geteran pola (panjang-jeda-panjang) sebagai penanda selesai 1 dzikir
+    if (window.navigator && window.navigator.vibrate) {
+      window.navigator.vibrate([100, 50, 100]); 
+    }
+
     if (currentIndex < currentData.length) {
       setCurrentIndex(currentIndex + 1);
       setTapCount(0);
