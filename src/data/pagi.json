@@ -64,7 +64,16 @@
   },
   {
     "id": 8,
-    "title": "Doa Memohon 'Afiat",
+    "title": "Doa 'Afiyah",
+    "arabic": "اللَّهُمَّ عَافِنِي فِي بَدَنِي، اللَّهُمَّ عَافِنِي فِي سَمْعِي، اللَّهُمَّ عَافِنِي فِي بَصَرِي، لَا إِلَٰهَ إِلَّا أَنْتَ. اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْكُفْرِ وَالْفَقْرِ، وَأَعُوذُ بِكَ مِنْ عَذَابِ الْقَبْرِ، لَا إِلَٰهَ إِلَّا أَنْتَ",
+    "transliteration": "Allaahumma 'aafinii fii badanii, allaahumma 'aafinii fii sam'ii, allaahumma 'aafinii fii basharii, laa ilaaha illaa anta. Allaahumma innii a'uudzu bika minal kufri wal faqri, wa a'uudzu bika min 'adzaabil qabri, laa ilaaha illaa anta.",
+    "translation": "Ya Allah, selamatkanlah tubuhku (dari penyakit dan dari apa yang tidak aku inginkan). Ya Allah, selamatkanlah pendengaranku (dari penyakit dan maksiat atau dari apa yang tidak aku inginkan). Ya Allah, selamatkanlah penglihatanku, tidak ada Ilah yang berhak diibadahi dengan benar kecuali Engkau. Ya Allah, sesungguhnya aku berlindung kepada-Mu dari kekufuran dan kefakiran. Aku berlindung kepada-Mu dari siksa kubur, tidak ada Ilah yang berhak diibadahi dengan benar kecuali Engkau.",
+    "target": 3,
+    "fadhilah": "Doa ini berisi permohonan keselamatan dan kesehatan anggota badan agar selalu bisa taat kepada Allah, serta perlindungan dari bahaya kekafiran, kefakiran, dan siksa kubur."
+  },
+  {
+    "id": 9,
+    "title": "Doa Memohon Keselamatan",
     "arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي الدُّنْيَا وَالْآخِرَةِ، اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي دِينِي وَدُنْيَايَ وَأَهْلِي وَمَالِي، اللَّهُمَّ اسْتُرْ عَوْرَاتِي وَآمِنْ رَوْعَاتِي، اللَّهُمَّ احْفَظْنِي مِنْ بَيْنِ يَدَيَّ، وَمِنْ خَلْفِي، وَعَنْ يَمِينِي وَعَنْ شِمَالِي، وَمِنْ فَوْقِي، وَأَعُوذُ بِعَظَمَتِكَ أَنْ أُغْتَالَ مِنْ تَحْتِي",
     "transliteration": "Allaahumma innii as-alukal 'afwa wal 'aafiyah fid dunyaa wal aakhiroh. Allaahumma innii as-alukal 'afwa wal 'aafiyah fii diinii wa dun-yaya wa ahlii wa maalii. Allaahumastur 'awraatii wa aamin row'aatii. Allaahummahfazh-nii mim bayni yadayya wa min kholfii wa 'an yamiinii wa 'an syimaalii wa min fawqii wa a'uudzu bi 'azhomatika an ughtaala min tahtii.",
     "translation": "Ya Allah, sesungguhnya aku memohon kebajikan dan keselamatan di dunia dan akhirat. Ya Allah, sesungguhnya aku memohon kebajikan dan keselamatan dalam agama, dunia, keluarga dan hartaku. Ya Allah, tutupilah auratku (aib dan sesuatu yang tidak layak dilihat orang) dan tenteramkanlah aku dari rasa takut. Ya Allah, peliharalah aku dari muka, belakang, kanan, kiri dan atasku. Aku berlindung dengan kebesaran-Mu, agar aku tidak disambar dari bawahku (oleh ular atau tenggelam dalam bumi dan lain-lain yang membuat aku jatuh).",
@@ -72,7 +81,7 @@
     "fadhilah": "Rasulullah shallallahu 'alaihi wa sallam tidaklah pernah meninggalkan do'a ini di pagi dan petang hari. Di dalamnya berisi perlindungan dan keselamatan pada agama, dunia, keluarga dan harta dari berbagai macam gangguan yang datang dari berbagai arah."
   },
   {
-    "id": 9,
+    "id": 10,
     "title": "Doa Perlindungan dari Syirik dan Kejelekan Diri",
     "arabic": "اللَّهُمَّ عَالِمَ الْغَيْبِ وَالشَّهَادَةِ فَاطِرَ السَّمَاوَاتِ وَالْأَرْضِ، رَبَّ كُلِّ شَيْءٍ وَمَلِيكَهُ، أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا أَنْتَ، أَعُوذُ بِكَ مِنْ شَرِّ نَفْسِي، وَمِنْ شَرِّ الشَّيْطَانِ وَشِرْكِهِ، وَأَنْ أَقْتَرِفَ عَلَىٰ نَفْسِي سُوءًا أَوْ أَجُرَّهُ إِلَىٰ مُسْلِمٍ",
     "transliteration": "Allaahumma 'aalimal ghoybi wasy syahaadah faathiros samaawaati wal ardh. Robba kulli syai-in wa maliikah. Asyhadu alla ilaaha illaa anta. A'uudzu bika min syarri nafsii wa min syarrisy syaythooni wa syirkihi, wa an aqtarifa 'alaa nafsii suu-an aw ajurrohu ilaa muslim.",
@@ -81,7 +90,7 @@
     "fadhilah": "Do'a ini diajarkan oleh Rasulullah shallallahu 'alaihi wa sallam pada Abu Bakr Ash Shiddiq radhiyallahu 'anhu untuk dibaca pada pagi, petang dan saat beranjak tidur."
   },
   {
-    "id": 10,
+    "id": 11,
     "title": "Doa agar Terhindar dari Marabahaya",
     "arabic": "بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ",
     "transliteration": "Bismillaahilladzii laa yadhurru ma'asmihi syai-un fil ardhi wa laa fis samaa' wa huwas samii'ul 'aliim.",
@@ -90,7 +99,7 @@
     "fadhilah": "Barangsiapa yang mengucapkan dzikir tersebut sebanyak tiga kali di pagi hari dan tiga kali di petang hari, maka tidak akan ada bahaya yang tiba-tiba memudaratkannya."
   },
   {
-    "id": 11,
+    "id": 12,
     "title": "Doa Keridhaan",
     "arabic": "رَضِيتُ بِاللَّهِ رَبًّا، وَبِالْإِسْلَامِ دِينًا، وَبِمُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ نَبِيًّا",
     "transliteration": "Radhiitu billaahi robbaa wa bil-islaami diinaa, wa bi-muhammadin shallallaahu 'alaihi wa sallama nabiyya.",
@@ -99,7 +108,7 @@
     "fadhilah": "Barangsiapa yang mengucapkan dzikir ini sebanyak tiga kali di pagi hari dan tiga kali di petang hari, maka pantas baginya mendapatkan ridha Allah."
   },
   {
-    "id": 12,
+    "id": 13,
     "title": "Doa Pertolongan",
     "arabic": "يَا حَيُّ يَا قَيُّومُ بِرَحْمَتِكَ أَسْتَغِيثُ، وَأَصْلِحْ لِي شَأْنِي كُلَّهُ وَلَا تَكِلْنِي إِلَىٰ نَفْسِي طَرْفَةَ عَيْنٍ أَبَدًا",
     "transliteration": "Yaa Hayyu Yaa Qoyyum, bi-rohmatika astaghiits, wa ash-lih lii sya'nii kullahu wa laa takilnii ilaa nafsii thorfata 'ainin abadan.",
@@ -108,7 +117,7 @@
     "fadhilah": "Dzikir ini diajarkan oleh Nabi shallallahu 'alaihi wa sallam pada Fathimah supaya diamalkan pagi dan petang."
   },
   {
-    "id": 13,
+    "id": 14,
     "title": "Doa Memegang Fitrah Islam",
     "arabic": "أَصْبَحْنَا عَلَىٰ فِطْرَةِ الْإِسْلَامِ وَعَلَىٰ كَلِمَةِ الْإِخْلَاصِ، وَعَلَىٰ دِينِ نَبِيِّنَا مُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ، وَعَلَىٰ مِلَّةِ أَبِينَا إِبْرَاهِيمَ حَنِيفًا مُسْلِمًا وَمَا كَانَ مِنَ الْمُشْرِكِينَ",
     "transliteration": "Ashbahnaa 'alaa fithrotil islaam wa 'alaa kalimatil ikhlaash, wa 'alaa diini nabiyyinaa Muhammadin shallallahu 'alaihi wa sallam, wa 'alaa millati abiinaa Ibraahiima haniifam musliman wa maa kaana minal musyrikiin.",
@@ -117,7 +126,7 @@
     "fadhilah": "Dzikir ini hanya dibaca di pagi hari. Riwayat yang menyatakan dibaca juga saat petang hari adalah riwayat yang lemah."
   },
   {
-    "id": 14,
+    "id": 15,
     "title": "Tasbih dan Tahmid (100x)",
     "arabic": "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ",
     "transliteration": "Subhaanallaahi wa bihamdih.",
@@ -126,7 +135,7 @@
     "fadhilah": "Barangsiapa yang mengucapkan kalimat 'subhanallah wa bi hamdih' di pagi dan petang hari sebanyak 100 kali, maka tidak ada yang datang pada hari kiamat yang lebih baik dari yang ia lakukan kecuali orang yang mengucapkan semisal atau lebih dari itu."
   },
   {
-    "id": 15,
+    "id": 16,
     "title": "Tasbih Tahlil (10x)",
     "arabic": "لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ",
     "transliteration": "Laa ilaaha illallaahu wahdahu laa syariika lah, lahul mulku walahul hamdu wa huwa 'alaa kulli syai-in qadiir.",
@@ -135,7 +144,7 @@
     "fadhilah": "Barangsiapa yang membaca dzikir tersebut di pagi hari sebanyak sepuluh kali, Allah akan mencatatkan baginya 10 kebaikan, menghapuskan baginya 10 kesalahan, ia juga mendapatkan kebaikan semisal memerdekakan 10 budak, Allah akan melindunginya dari gangguan setan hingga petang hari. Siapa yang mengucapkannya di petang hari, ia akan mendapatkan keutamaan semisal itu pula."
   },
   {
-    "id": 16,
+    "id": 17,
     "title": "Dzikir Pemberat Timbangan",
     "arabic": "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ: عَدَدَ خَلْقِهِ، وَرِضَا نَفْسِهِ، وَزِنَةَ عَرْشِهِ وَمِدَادَ كَلِمَاتِهِ",
     "transliteration": "Subhaanallaahi wa bihamdih, 'adada khalqih wa ridhaa nafsih, wa zinata 'arsyih, wa midaada kalimaatih.",
@@ -144,7 +153,7 @@
     "fadhilah": "Nabi shallallahu 'alaihi wa sallam mengatakan pada Juwairiyah bahwa dzikir di atas telah mengalahkan dzikir yang dibaca oleh Juwairiyah dari selepas Shubuh sampai waktu Dhuha."
   },
   {
-    "id": 17,
+    "id": 18,
     "title": "Doa Memohon Ilmu dan Amal",
     "arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا، وَرِزْقًا طَيِّبًا، وَعَمَلًا مُتَقَبَّلًا",
     "transliteration": "Allaahumma innii as-aluka 'ilman naafi'a, wa rizqon thoyyibaa, wa 'amalan mutaqobbalaa.",
@@ -153,7 +162,7 @@
     "fadhilah": null
   },
   {
-    "id": 18,
+    "id": 19,
     "title": "Istighfar (100x)",
     "arabic": "أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ",
     "transliteration": "Astagh-firullaaha wa atuubu ilaih.",
